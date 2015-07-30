@@ -1,0 +1,22 @@
+var FIRST_NAMES = ["Teri", "Sonia", "Adalberto", "Hayley", "Kristine", "Aleisha", "Suzan", "Betty", "Summer", "Apryl", "Hildegard", "Thad", "Shawnta", "Floyd", "Holley", "Sima", "Merissa", "Jean", "Sharlene", "Karren", "Loralee", "Hui", "Rosalia", "Emelda", "Tracee", "Soo", "Markus", "Agatha", "Lorette", "Elisha", "Nadia", "Britta", "Sparkle", "Bernarda", "Brain", "May", "Johnnie", "Hettie", "Lovella", "Kenyetta", "Shella", "Kaitlyn", "Quyen", "Exie", "Taylor", "Margy", "Zulma", "Gonzalo", "Sandi", "Ilana", "Hunter", "Verla", "Merilyn", "Julee", "Elenore", "Sha", "Rosana", "Brendan", "Cassi", "Rashida", "Liza", "Delmar", "Brittani", "Angelic", "Celina", "Glayds", "King", "Issac", "Jesusa", "Lillia", "Evie", "Kimberli", "Chase", "Alta", "Mac", "Donella", "Laurena", "Giuseppina", "Sharee", "Kristal", "Ernie", "Luna", "Marica", "Eleonor", "Karey", "Annabelle", "Raymonde", "Shantay", "Aurelio", "Tamika", "Serena", "Jere", "Matilda", "Renata", "Maurice", "Madeline", "Lia", "Velvet", "Florence", "Eulah", "Rebbeca", "Chantelle", "Selena", "Marita", "Daisey", "Tess", "Kate", "Marianna", "Latia", "Juliane", "Ty", "Brandy", "Mandi", "Corrinne", "Myra", "Claudio", "Ola", "Billie", "Jonell", "Karolyn", "Sunni", "Candyce", "Charmain", "Leola", "Sabine", "Sherita", "Cleveland", "Emile", "Cris", "Terrell", "Hisako", "Kathern", "Reinaldo", "Elaine", "Lang", "August", "Irvin", "Peg", "Charlsie", "Vena", "Lino", "Nicole", "Truman", "Eloy", "Tabitha", "Shauna", "Olivia", "Louvenia", "Lorean", "Agripina", "Kaitlin", "Sherice", "Herta", "Micki", "Bree", "Aron", "Maryjane", "Robbin", "Halina", "Andre", "Tari", "Susanne", "Carylon", "Salvador", "Twanna", "Pearl", "Maxie", "Keva", "Marc", "Twanda", "Tommie", "Sonny", "Basilia", "John", "Joanna", "My", "Lynn", "Chong", "Glory", "Tiny", "Odilia", "Silvia", "Leighann", "Alyson", "Rhonda", "Glynda", "Roseann", "Sindy", "Lai", "Voncile", "Alyce", "Georgie", "Peter", "Raisa", "Adolfo", "Dia", "Kent", "Piedad"],
+    LAST_NAMES = ["Crupi", "Groat", "Higley", "Biederman", "Kilbane", "Neathery", "Koziel", "Buchmann", "Bardsley", "Marcucci", "Sheilds", "Karg", "Vogler", "Scheuermann", "Coble", "Gunia", "Ewers", "Kernan", "Mills", "Wainwright", "Kates", "Amon", "Haggard", "Roesch", "Devereux", "Fonda", "Ribeiro", "Griffieth", "Prall", "Burris", "Lightner", "Donaldson", "Underwood", "Heras", "Renolds", "Spraggs", "Lalonde", "Pidgeon", "Asmussen", "Chipps", "Yelton", "Kale", "Shuman", "Troncoso", "Smyth", "Roland", "Dalessandro", "Ruther", "Holliman", "Banner", "Larimore", "Lacayo", "Combs", "Treese", "Friley", "Luu", "Redinger", "Leclaire", "Nick", "Lamontagne", "Hiles", "Armbruster", "Verhoeven", "Banaszak", "Labriola", "Huie", "Villescas", "Acedo", "Lyle", "Perlman", "Prevo", "Meldrum", "Conrad", "Pershall", "Miro", "Royce", "Gift", "Kump", "Goo", "Macke", "Gaxiola", "Bakley", "Montague", "Hammell", "Borel", "Casimir", "Quimby", "Tew", "Osman", "Longerbeam", "Goehring", "Graydon", "Ferriera", "Axel", "Louviere", "Acuff", "Valenta", "Craw", "Turek", "Ruddy", "Carreno", "Leeds", "Trowbridge", "Alatorre", "Fann", "Daw", "Earp", "Silver", "Canipe", "Brockington", "Say", "Schnur", "Morrisette", "Trawick", "Pavelka", "Baril", "Sosa", "Bevill", "Briese", "Bramhall", "Davila", "Lierman", "Maisch", "Mccready", "Minter", "Lomax", "Lukasik", "Keyser", "Lamey", "Vangieson", "Laseter", "Sassano", "Moreles", "Gesell", "Schisler", "Staats", "Direnzo", "Buckner", "Ley", "Perillo", "Vanderlinden", "Brickey", "Hanlin", "Capuano", "Cioffi", "Birt", "Cooperman", "Mollett", "Millard", "Coggin", "Toms", "Haas", "Tolle", "Heady", "Norvell", "Plasencia", "Iman", "Ballengee", "Forster", "Brisbin", "Otts", "Potvin", "Vickery", "Pingree", "Pizana", "Lefebre", "Costanza", "Deguzman", "Bockelman", "Schmidt", "Eldridge", "Roll", "Cuen", "Mcmillon", "Gutowski", "Manly", "Pipkin", "Hazan", "Gongora", "Mcmillen", "Cantwell", "Ruston", "Shulman", "Kehr", "Colburn", "Dunaway", "Mccowen", "Blurton", "Prigge", "Pewitt", "Laufer", "Martone", "Constantine", "Bucy", "Jelks", "Miranda", "Dively", "Chubb", "Maricle", "Efird"];
+
+module.exports = {
+    __key: 'name:',
+};
+
+module.exports['name:first'] = firstName;
+module.exports['name:last'] = lastName;
+module.exports['name:full'] = fullName;
+
+function firstName() {
+    return FIRST_NAMES.randomValue();
+}
+
+function lastName() {
+    return LAST_NAMES.randomValue();
+}
+
+function fullName() {
+    return firstName() + ' ' + lastName();
+}
