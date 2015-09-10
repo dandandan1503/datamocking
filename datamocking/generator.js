@@ -1,16 +1,13 @@
-var fs = require('fs'),
-    path = require('path'),
+var path = require('path'),
+    read = require('fs-readdir-recursive'),
     _modulesPath = path.join(__dirname, 'generators'),
     _modelsPath = path.join(__dirname, 'models'),
-    _modules = [],
-    _models = [];
-
-fs.readdirSync(_modulesPath).forEach(function(file) {
-    _modules.push(require('./generators/' + file));
-});
-fs.readdirSync(_modelsPath).forEach(function(file) {
-    _models.push(require('./models/' + file));
-});
+    _modules = read(_modulesPath).map(function(file) {
+        return require('./generators/' + file);
+    }),
+    _models = read(_modelsPath).map(function(file) {
+        return require('./models/' + file);
+    });
 
 
 module.exports = {
@@ -30,6 +27,14 @@ function fromKey(key, count, dependencies) {
 
 function fromConfig(config, count, dependencies) {
     var data = [];
+
+    _modules.forEach(function(module) {
+        for(var key in module) {
+            if(module.hasOwnProperty(key) && module[key] && typeof(module[key].reset) === 'function') {
+                module[key].reset();
+            }
+        }
+    });
 
     for (var i = 0; i < count; i++) {
         data.push(generateRow(config, dependencies));

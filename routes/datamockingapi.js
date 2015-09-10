@@ -1,7 +1,8 @@
 var express = require('express');
 var api = require('../datamocking/api');
+var generator = require('../datamocking/generator');
+var initializer = require('../datamocking/initializer');
 var router = express.Router();
-var app = express();
 
 // Create empty routeParams object on req
 router.use(function routeParamsInit(req, res, next) {
@@ -48,6 +49,5 @@ router.post('/api/generate/:count', function (req, res, next) {
 router.get('/api/generate/:model/:count', function (req, res, next) {
     res.json(generator.fromKey(req.params.model, +req.params.count));
 });
-
 
 module.exports = router;
