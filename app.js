@@ -41,7 +41,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
   allowedOrigins: [
-      'localhost:*'
+      'localhost:*',
+      'hs1engweb02.sbcsystems.local:*'
   ]
 }));
 app.set('json spaces', 4);
